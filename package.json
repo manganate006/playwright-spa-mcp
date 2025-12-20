@@ -1,0 +1,61 @@
+{
+  "name": "playwright-spa-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Playwright with SPA support, persistent sessions, device emulation, and action chains",
+  "main": "src/index.js",
+  "bin": {
+    "playwright-spa": "./bin/cli.js",
+    "playwright-spa-mcp": "./src/index.js",
+    "browser-screenshot": "./browser.js",
+    "browser-daemon": "./browser-daemon.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "cli": "node browser.js",
+    "daemon": "node browser-daemon.js",
+    "test": "node browser.js --url https://example.com --action screenshot"
+  },
+  "keywords": [
+    "mcp",
+    "playwright",
+    "spa",
+    "react",
+    "vue",
+    "angular",
+    "browser",
+    "automation",
+    "screenshot",
+    "testing",
+    "web-scraping",
+    "headless",
+    "device-emulation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manganate006/playwright-spa-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manganate006/playwright-spa-mcp/issues"
+  },
+  "homepage": "https://github.com/manganate006/playwright-spa-mcp#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1",
+    "playwright": ">=1.40.0"
+  },
+  "peerDependencies": {
+    "playwright": ">=1.40.0"
+  },
+  "files": [
+    "src/",
+    "lib/",
+    "bin/",
+    "browser.js",
+    "browser-daemon.js",
+    "README.md"
+  ]
+}

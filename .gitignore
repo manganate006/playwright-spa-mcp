@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime
+.DS_Store
+Thumbs.db
+
+# Screenshots (generated)
+/tmp/screenshots/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test
+coverage/
+.nyc_output/
+
+# Build artifacts
+*.tgz
+
+# Environment
+.env
+.env.local
+
+# Daemon
+/tmp/playwright-daemon.sock
