@@ -30,22 +30,11 @@
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/manganate006/playwright-spa-mcp.git
-cd playwright-spa-mcp
-
-# Install dependencies
-npm install
+# One command - no clone needed!
+claude mcp add playwright-spa -- npx -y github:manganate006/playwright-spa-mcp
 
 # Install Playwright browser
 npx playwright install chromium
-```
-
-### Add to Claude
-
-**Claude Code:**
-```bash
-claude mcp add playwright-spa -- node /path/to/playwright-spa-mcp/src/index.js
 ```
 
 **Claude Desktop** (`claude_desktop_config.json`):
@@ -53,12 +42,26 @@ claude mcp add playwright-spa -- node /path/to/playwright-spa-mcp/src/index.js
 {
   "mcpServers": {
     "playwright-spa": {
-      "command": "node",
-      "args": ["/path/to/playwright-spa-mcp/src/index.js"]
+      "command": "npx",
+      "args": ["-y", "github:manganate006/playwright-spa-mcp"]
     }
   }
 }
 ```
+
+<details>
+<summary>📦 Alternative: Clone & install locally</summary>
+
+```bash
+git clone https://github.com/manganate006/playwright-spa-mcp.git
+cd playwright-spa-mcp
+npm install
+npx playwright install chromium
+
+# Add to Claude
+claude mcp add playwright-spa -- node $(pwd)/src/index.js
+```
+</details>
 
 ---
 
@@ -253,6 +256,15 @@ playwright-spa-mcp/
 ├── browser-daemon.js     # Daemon mode
 └── package.json
 ```
+
+---
+
+## 🌐 Projects Built With This MCP
+
+| Project | Description |
+|---------|-------------|
+| [atp.mangi.fr](https://atp.mangi.fr) | 🎾 ATP Tennis Stats since 1968 |
+| [piscinade.com](https://piscinade.com) | 🏊 Pool party finder in France |
 
 ---
 
