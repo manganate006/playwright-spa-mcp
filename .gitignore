@@ -31,3 +31,4 @@ coverage/
 
 # Daemon
 /tmp/playwright-daemon.sock
+CLAUDE.md
